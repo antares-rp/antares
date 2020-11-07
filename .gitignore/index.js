@@ -1,16 +1,9 @@
-/////////////////////////////////////////////////////
-// VARIABLES
-/////////////////////////////////////////////////////
 
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const configs = require("./configs.json");
 const fivereborn = require('fivereborn-query');
 client.config = configs;
-
-/////////////////////////////////////////////////////
-// DEMARRER LE BOT
-/////////////////////////////////////////////////////
 
 client.login(configs.token)
   .then(
@@ -22,10 +15,6 @@ client.login(configs.token)
       client.destroy();
       console.log("Bot détruit!");
     });
-
-/////////////////////////////////////////////////////
-// FONCTION (A NE PAS MODIFIER)
-/////////////////////////////////////////////////////
 
 function activity() {
   setTimeout(() => {
